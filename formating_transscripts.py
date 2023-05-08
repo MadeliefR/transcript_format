@@ -2,7 +2,7 @@ import os
 import re
 from docx import Document
 
-directory = "path" #! enter path of directory
+directory = "path" #! 1. enter path of directory
 
 
 # loop through each file in the directory
@@ -20,7 +20,7 @@ def format_transscript(directory):
             content = re.sub(r'\d+:\d+:\d+\.\d+ --> \d+:\d+:\d+\.\d+', '\n', content)
 
             # replace my name with "researcher"
-            content = re.sub(r'\bMadelief\sRiphagen\b', 'Researcher:', content)
+            content = re.sub(r'\bFirstname\sLastname\b', 'Researcher:', content) #! 2. enter regex of your name
 
             # save the edited file
             edited_doc = Document()
