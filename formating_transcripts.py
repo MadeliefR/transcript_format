@@ -16,13 +16,13 @@ def format_transscript(directory):
             for para in doc.paragraphs:
                 content += para.text
 
-            # replace the timestamp with a space
+            # replace the timestamp with a white line
             content = re.sub(r'\d+:\d+:\d+\.\d+ --> \d+:\d+:\d+\.\d+', '\n', content)
 
-            # replace my name with "researcher"
+            # replace name with "researcher:"
             content = re.sub(r'\bFirstname\sLastname\b', 'Researcher:', content) #! 2. enter regex of your name
 
-            # save the edited file
+            # save the edited file as a new file
             edited_doc = Document()
             edited_doc.add_paragraph(content)
             edited_doc.save(os.path.join(directory, 'edited_' + filename))
