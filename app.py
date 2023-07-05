@@ -5,7 +5,7 @@ app = FastAPI()
 
 @app.get("/")
 async def root():
-    return "please create a directory and add your Teams transscripts '.docx' files to it."
+    return "please create a directory and add your Teams transscripts '.docx' files to it. Next go to http://localhost:8000/docs#/default/formatting_formatting_get and fill in the form "
 
 @app.get("/formatting")
 async def formatting(path_of_directory: str, firstname: str, lastname:str):
