@@ -8,4 +8,4 @@ services:
     volumes:
       - .:app
       # this volume syncing allows you to change your code
-      # where it will automattivally restart the docker container
+      # where it will automattivally restart the uvicorn process
