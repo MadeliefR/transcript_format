@@ -4,3 +4,4 @@ python_docx==0.8.11
 uvicorn==0.17.6
 pydantic>=1.2.0,<2.0.0
 fastapi==0.78.0
+python-multipart==0.0.6
