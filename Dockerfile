@@ -13,7 +13,8 @@ RUN pip install --no-cache-dir --upgrade -r requirements.txt
 # copy the scripts to the foler
 COPY . /app
 
-# expose port
-EXPOSE 8000
+# Expose port
+EXPOSE 8080
 
+# Command to run when container starts
 CMD [ "uvicorn", "app:app", "--host", "0.0.0.0", "--port", "80" ]
